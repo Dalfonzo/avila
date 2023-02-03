@@ -15,7 +15,7 @@ const CategoryCard = ({
       src={image}
       alt={alt}
       width={160}
-      height={150}
+      height={160}
       className="aspect-1"
     />
     <p className="font-semibold text-center capitalize text-text-black">

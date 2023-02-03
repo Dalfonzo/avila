@@ -18,7 +18,7 @@ const SideImageGrid = ({
         alt="Imagen de publicidad"
         className="aspect-[31/50]"
         width={440}
-        height={708}
+        height={710}
       />
     </div>
     <div className="grid grid-cols-3 grid-rows-2 gap-y-2 flex-1">

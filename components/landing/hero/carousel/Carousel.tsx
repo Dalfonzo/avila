@@ -41,7 +41,7 @@ const Carousel = ({
               alt={image.alt}
               className="block w-full"
               height={580}
-              width={2048}
+              width={1440}
               priority
             />
           </div>
