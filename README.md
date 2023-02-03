@@ -1,8 +1,9 @@
 # Descripciones generales
+![image](https://user-images.githubusercontent.com/46352804/216709921-6a0c8f53-4ab4-4b8d-ae6d-9d9686ab49f1.png)
 
 ## Link del despliegue
 
-https://vercel.com/dalfonzo/avila
+https://avila-theta.vercel.app/
 
 ## Para ejecutar el proyecto
 
