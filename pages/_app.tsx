@@ -29,7 +29,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Plantilla Next.js | Avila Tek</title>
+        <title>MaxiPet | Tienda de mascotas</title>
+        <meta
+          name="description"
+          content="Una tienda para comprar todo lo necesario para tu mascota"
+        />
       </Head>
       <Component {...pageProps} />
     </>
