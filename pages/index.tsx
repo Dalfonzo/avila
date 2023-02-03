@@ -1,34 +1,43 @@
 import React from 'react';
-import Image from 'next/image';
-import logo from '../public/logo.png';
+import dynamic from 'next/dynamic';
+import { CategoriesList } from '../components/landing/categories/categories-list';
+import { BannerCard } from '../components/landing/banner/banner-card';
+import Banner1 from '../assets/images/banner-1.jpg';
+import Banner2 from '../assets/images/banner-2.jpg';
+import { ServicesGrid } from '../components/landing/services/services-grid';
+import { Layout } from '../components/common/layout';
+import Hero from '../components/landing/hero/Hero';
+
+const FeaturedProducts = dynamic(
+  () =>
+    import('../components/landing/product/featured-products/FeaturedProducts')
+);
+const LatestProducts = dynamic(
+  () => import('../components/landing/product/latest-products/LatestProducts')
+);
+const PopularProducts = dynamic(
+  () => import('../components/landing/product/popular-products/PopularProducts')
+);
+const BrandsList = dynamic(
+  () => import('../components/landing/brands/brands-list/BrandsList')
+);
 
 function HomePage() {
   return (
-    <div className="min-h-screen w-screen bg-white flex dark:bg-black">
-      <section className="max-w-screen-md m-auto h-full">
-        <article className="">
-          <a href="https://avilatek.dev" target="_blank" rel="noreferrer">
-            <Image
-              className="w-96 h-auto text-center mx-auto"
-              alt="Avila Tek Logo"
-              src={logo}
-            />
-          </a>
-          <h1 className="text-2xl text-center text-gray-700 dark:text-gray-100">
-            Next.js Started template
-          </h1>
-          <p className="text-center text-white text-lg mt-2">
-            <a
-              href="https://github.com/Avila-Tek/next-template"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-          </p>
-        </article>
-      </section>
-    </div>
+    <Layout>
+      <Hero />
+      <CategoriesList />
+      <FeaturedProducts />
+      <BannerCard image={Banner1} alt="Imagen de un perro comiendo" />
+      <PopularProducts />
+      <BannerCard
+        image={Banner2}
+        alt="Imagen de un perro jugando con una pelota"
+      />
+      <LatestProducts />
+      <ServicesGrid />
+      <BrandsList />
+    </Layout>
   );
 }
 

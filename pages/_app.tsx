@@ -18,7 +18,14 @@ function MyApp({ Component, pageProps }: AppProps) {
     Router.events.on('routeChangeError', () => {
       NProgress.done();
     });
+
+    const use = async () => {
+      // eslint-disable-next-line no-unused-expressions
+      (await import('tw-elements')).default;
+    };
+    use();
   }, []);
+
   return (
     <>
       <Head>
