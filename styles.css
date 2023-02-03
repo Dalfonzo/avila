@@ -6,7 +6,7 @@
 /* purgecss start ignore */
 html,
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', 'Work Sans', 'Calibri', sans-serif;
 }
 
 #nprogress {
@@ -89,3 +89,15 @@ body {
   }
 }
 /* purgecss end ignore */
+
+/* Carousel styles */
+@layer components {
+  .carousel-indicators [data-bs-target] {
+    @apply bg-secondary-100 rounded-md w-12 border-2 p-[1px];
+  }
+
+  .carousel-indicators .active {
+    @apply bg-primary-300;
+  }
+}
+/* End of Carousel styles */

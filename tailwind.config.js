@@ -6,9 +6,16 @@ module.exports = {
     './pages/**/*.{js,jsx,ts,tsx}',
     './components/**/*.{js,jsx,ts,tsx}',
     './context/**/*.{js,jsx,ts,tsx}',
+    './src/**/*.{html,js}',
+    './node_modules/tw-elements/dist/js/**/*.js',
   ],
   darkMode: 'class',
   theme: {
+    fontFamily: {
+      mont: ['Montserrat'],
+      ws: ['Work Sans'],
+      cal: ['Calibri'],
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -18,18 +25,23 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          100: '#787878',
-          200: '#5E5E5E',
-          300: '#454545',
-          400: '#2B2B2B',
-          500: '#121212',
+          300: '#E2081E',
         },
         secondary: {
-          100: '#DCFEEA',
-          200: '#AAFDCD',
-          300: '#79FCAF',
-          400: '#47FA92',
-          500: '#15F974',
+          100: '#DAD6D3',
+          200: '#C8C2BE',
+          500: '#867D77',
+          600: '#68605B',
+        },
+        text: {
+          black: '#333333',
+          white: '#FEFEFE',
+        },
+        neutral: {
+          600: '#5F5F5F',
+        },
+        background: {
+          200: '#FCFCFC',
         },
       },
     },
@@ -39,5 +51,7 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/line-clamp'),
+    require('tw-elements/dist/plugin'),
+    require('tailwindcss-animate'),
   ],
 };
