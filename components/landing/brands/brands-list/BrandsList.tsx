@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 import { PreTitle, Subtitle } from '../../../common/text';
 import BrandLogo from '../../../../assets/images/brand-logo.png';
 import { BrandCard } from '../brand-card';
+import withAnimation from '../../../../hoc/withAnimation';
 
 const BRANDS_LIST = [
   { image: BrandLogo, alt: '1st Choice Nutrition logo', id: nanoid() },
@@ -12,7 +13,7 @@ const BRANDS_LIST = [
 ];
 
 const BrandsList = () => (
-  <section className="mt-28 max-w-6xl mx-auto animate-in fade-in zoom-in">
+  <section className="mt-28 max-w-6xl mx-auto">
     <PreTitle>Lorem ipsum dolor sit amet. </PreTitle>
     <Subtitle>Trabajamos con las mejores marcas</Subtitle>
     <div className="grid grid-cols-6 gap-12 mt-8">
@@ -27,4 +28,4 @@ const BrandsList = () => (
   </section>
 );
 
-export default BrandsList;
+export default withAnimation(BrandsList);

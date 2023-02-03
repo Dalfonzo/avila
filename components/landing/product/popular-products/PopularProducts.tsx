@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 import { ProductCard } from '../product-card';
 import PlaceholderImage from '../../../../assets/images/puppy-chiot.png';
 import { PreTitle, Subtitle } from '../../../common/text';
+import withAnimation from '../../../../hoc/withAnimation';
 
 const PRODUCTS_LIST = [
   {
@@ -48,7 +49,7 @@ const PRODUCTS_LIST = [
 ];
 
 const PopularProducts = () => (
-  <section className="max-w-6xl mx-auto animate-in fade-in zoom-in">
+  <section className="max-w-6xl mx-auto">
     <PreTitle>Lorem ipsum dolor sit amet.</PreTitle>
     <Subtitle className="mb-5">productos populares</Subtitle>
     <div className="grid grid-cols-5 justify-items-center">
@@ -66,4 +67,4 @@ const PopularProducts = () => (
   </section>
 );
 
-export default PopularProducts;
+export default withAnimation(PopularProducts);

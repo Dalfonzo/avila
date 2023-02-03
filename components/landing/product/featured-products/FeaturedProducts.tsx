@@ -5,6 +5,7 @@ import { ProductCard } from '../product-card';
 import PlaceholderImage from '../../../../assets/images/puppy-chiot.png';
 import CatAd from '../../../../assets/images/cat-ad.jpg';
 import { SideImageGrid } from '../side-image-grid';
+import withAnimation from '../../../../hoc/withAnimation';
 
 const PRODUCTS_LIST = [
   {
@@ -58,7 +59,7 @@ const PRODUCTS_LIST = [
 ];
 
 const FeaturedProducts = () => (
-  <section className="mt-20  max-w-6xl mx-auto animate-in fade-in zoom-in">
+  <section className="mt-20  max-w-6xl mx-auto">
     <PreTitle>Lorem ipsum dolor sit amet.</PreTitle>
     <Subtitle className="mb-5">Productos destacados</Subtitle>
     <SideImageGrid image={CatAd}>
@@ -76,4 +77,4 @@ const FeaturedProducts = () => (
   </section>
 );
 
-export default FeaturedProducts;
+export default withAnimation(FeaturedProducts);

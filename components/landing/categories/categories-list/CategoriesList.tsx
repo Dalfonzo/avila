@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 import { PreTitle, Subtitle } from '../../../common/text';
 import { CategoryCard } from '../category-card';
 import DogIcon from '../../../../assets/images/dog-icon.png';
+import withAnimation from '../../../../hoc/withAnimation';
 
 const CATEGORIES_LIST = [
   {
@@ -44,7 +45,7 @@ const CATEGORIES_LIST = [
 ];
 
 const CategoriesList = () => (
-  <section className="mt-16  max-w-6xl mx-auto animate-in fade-in zoom-in">
+  <section className="mt-16  max-w-6xl mx-auto">
     <PreTitle>Lorem ipsum dolor sit amet.</PreTitle>
     <Subtitle>Una gran variedad de categorías</Subtitle>
     <div className="grid grid-cols-6 justify-items-center mt-5">
@@ -60,4 +61,4 @@ const CategoriesList = () => (
   </section>
 );
 
-export default CategoriesList;
+export default withAnimation(CategoriesList);

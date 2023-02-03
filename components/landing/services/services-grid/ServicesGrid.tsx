@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 import { PreTitle, Subtitle } from '../../../common/text';
 import { ServiceCard } from '../service-card';
 import ServiceImage from '../../../../assets/images/dog-icon-no-paw.png';
+import withAnimation from '../../../../hoc/withAnimation';
 
 const SERVICES_LIST = [
   {
@@ -56,7 +57,7 @@ const SERVICES_LIST = [
 ];
 
 const ServicesGrid = () => (
-  <section className="mt-20 max-w-6xl mx-auto animate-in fade-in zoom-in">
+  <section className="mt-20 max-w-6xl mx-auto">
     <PreTitle>Lorem ipsum dolor sit amet.</PreTitle>
     <Subtitle>Nuestros servicios</Subtitle>
     <p className="text-text-black text-md mt-5 font-cal">
@@ -77,4 +78,4 @@ const ServicesGrid = () => (
   </section>
 );
 
-export default ServicesGrid;
+export default withAnimation(ServicesGrid);
